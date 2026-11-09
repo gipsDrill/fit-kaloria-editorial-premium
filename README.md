@@ -23,3 +23,6 @@ index.html — treść; style.css — wygląd; app.js — interakcje. Po zmianie
 
 ## Materiały
 Fotografie osoby i nazwa marki pozostają materiałami dostarczonymi do tego projektu. Publiczność repozytorium nie stanowi odrębnej licencji na wizerunek.
+
+## Aktualizacja wizualna
+Dodano zdjęcia przygotowywania posiłków i kompozycji przy oknie oraz wyizolowaną miskę śniadaniową i gałązkę oliwną. Materiały dekoracyjne wygenerowano na potrzeby projektu; nie przedstawiają rzeczywistego gabinetu ani konkretnej usługi. Wersja Editorial zawiera pięć zdjęć w pokazie oraz galerię inspiracji. Z nagłówków usunięto kropki.
