@@ -1,8 +1,20 @@
 
-// Resize Facebook's documented fixed-width plugin when its container changes.
-(()=>{const host=document.getElementById('facebook-timeline');if(!host)return;let width=0,timer;
- const render=()=>{const next=Math.min(500,Math.floor(host.getBoundingClientRect().width));if(next<180||next===width)return;width=next;
- const url=new URL('https://www.facebook.com/plugins/page.php');url.search=new URLSearchParams({href:host.dataset.page,tabs:'timeline',width:String(width),height:'760',small_header:'true',adapt_container_width:'true',hide_cover:'false',show_facepile:'false',locale:'pl_PL'}).toString();
- const frame=document.createElement('iframe');frame.src=url.toString();frame.title='Najnowsze posty Fit Kaloria na Facebooku';frame.width=String(width);frame.height='760';frame.loading='lazy';frame.allow='encrypted-media; picture-in-picture; web-share';frame.referrerPolicy='strict-origin-when-cross-origin';host.replaceChildren(frame);};
- render();if('ResizeObserver'in window)new ResizeObserver(()=>{clearTimeout(timer);timer=setTimeout(render,240);}).observe(host);
+// Native, verified Facebook video embeds. No scraping, tokens or background sync.
+(()=>{
+ const items=[...document.querySelectorAll('.fb-post-video')];
+ const allowed=new Set(['1071474369213543','1094443916688878','1142449098470374']);
+ const mount=item=>{
+   const host=item.querySelector('.fb-post-player');
+   if(!item.open){host.replaceChildren();delete host.dataset.width;return;}
+   const video=new URL(item.dataset.video);const match=video.pathname.match(/^\/reel\/(\d+)\/$/);
+   if(video.origin!=='https://www.facebook.com'||!match||!allowed.has(match[1]))return;
+   const width=Math.floor(host.getBoundingClientRect().width);if(width<180)return;
+   if(host.dataset.width===String(width))return;
+   const height=Math.round(width*476/267);
+   const url=new URL('https://www.facebook.com/plugins/video.php');
+   url.search=new URLSearchParams({href:video.href,show_text:'false',width:String(width),height:String(height),t:'0'}).toString();
+   const frame=document.createElement('iframe');frame.src=url.href;frame.title=item.dataset.title+' — wpis Fit Kaloria na Facebooku';frame.width=String(width);frame.height=String(height);frame.allow='encrypted-media; picture-in-picture; web-share';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';host.dataset.width=String(width);host.replaceChildren(frame);
+ };
+ items.forEach(item=>{item.addEventListener('toggle',()=>{if(item.open)items.forEach(other=>{if(other!==item){other.open=false;mount(other);}});mount(item);});mount(item);});
+ let timer;window.addEventListener('resize',()=>{clearTimeout(timer);timer=setTimeout(()=>items.filter(x=>x.open).forEach(mount),240);});
 })();
