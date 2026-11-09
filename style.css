@@ -253,3 +253,11 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
 .workshop-feature figure{margin:0}.workshop-feature img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}.natural .workshop-feature img{border-radius:20px}
 .workshop-feature h2{font-size:36px;line-height:1.15;letter-spacing:-.6px;margin:15px 0 20px}.workshop-feature p{font-size:16px;line-height:1.75;margin:0 0 16px}.workshop-feature a{display:inline-block;padding:10px 0;border-bottom:1px solid #7d8a68;font-size:14px}
 @media(max-width:780px){.workshop-feature{grid-template-columns:1fr;gap:26px;padding:30px 0}.workshop-feature h2{font-size:32px}}
+/* Service accordion: closed initially, with clear toggle hints. */
+.editorial .editorial-offer .service-row h3{min-width:0}
+.editorial .editorial-offer .row-action{display:inline-flex;align-items:center;gap:10px;flex-shrink:0}
+.editorial .editorial-offer .row-hint{font-family:Arial,sans-serif;font-size:11px;font-weight:400;line-height:1.2;letter-spacing:.03em;white-space:nowrap;opacity:.85}
+.editorial .editorial-offer .row-hint-close{display:none}
+.editorial .editorial-offer .service-row[open] .row-hint-open{display:none}
+.editorial .editorial-offer .service-row[open] .row-hint-close{display:inline}
+@media(max-width:780px){.editorial .editorial-offer .row-action{gap:7px}.editorial .editorial-offer .row-hint{font-size:10px;letter-spacing:0}}
