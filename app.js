@@ -8,7 +8,7 @@ document.querySelectorAll('.copy-email').forEach(btn=>btn.addEventListener('clic
 const slides=[...document.querySelectorAll('.hero-slide')],controls=[...document.querySelectorAll('[data-slide]')],pause=document.querySelector('.pause-slides');let active=0,paused=motion.matches,timer;
 function showSlide(i){active=i;document.querySelector('.editorial-hero')?.classList.toggle('is-portrait',slides[i].classList.contains('portrait-slide'));slides.forEach((s,j)=>{s.classList.toggle('active',j===i);s.setAttribute('aria-hidden',String(j!==i))});controls.forEach((b,j)=>b.setAttribute('aria-pressed',String(j===i)));}
 function stop(){clearInterval(timer)}
-function start(){stop();if(!paused&&!document.hidden&&slides.length>1)timer=setInterval(()=>showSlide((active+1)%slides.length),7500)}
+function start(){stop();if(!paused&&!document.hidden&&slides.length>1)timer=setInterval(()=>showSlide((active+1)%slides.length),6500)}
 function pauseLabel(){if(pause){pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'Wznów pokaz zdjęć':'Zatrzymaj pokaz zdjęć')}}
 controls.forEach((b,i)=>b.addEventListener('click',()=>{showSlide(i);paused=true;stop();pauseLabel()}));pause?.addEventListener('click',()=>{paused=!paused;pauseLabel();start()});motion.addEventListener('change',e=>{if(e.matches){paused=true;pauseLabel();stop();document.documentElement.classList.remove('js-motion')}});document.addEventListener('visibilitychange',start);pauseLabel();start();
 
