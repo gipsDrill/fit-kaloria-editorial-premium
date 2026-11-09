@@ -230,3 +230,26 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
 .natural .review-source-column{border:1px solid #dfe1d4;border-radius:18px;padding:22px;background:#fffdf7}.natural .review-controls{right:22px;bottom:22px}
 @media(max-width:900px){.review-sources{gap:24px}.review-source-summary{gap:10px}.review-source-summary h3{font-size:19px}.review-source-score strong{font-size:34px}.opinions.review-overview .review-card blockquote p{font-size:18px}}
 @media(max-width:680px){.opinions.review-overview{padding:45px 0}.review-overview .review-overview-heading h2{font-size:34px}.review-overview-heading{margin-bottom:25px}.review-sources{grid-template-columns:1fr;gap:25px}.review-source-column{padding-top:17px}.review-source-summary{padding-bottom:14px}.review-source-summary h3{font-size:23px}.review-source-score strong{font-size:36px}.opinions.review-overview .review-card{padding-top:16px}.opinions.review-overview .review-card blockquote{margin-bottom:16px}.review-controls button{width:40px;height:44px}.review-controls{margin-top:2px}.review-overview-note{margin-top:20px}}
+
+/* Expanded offer: eight compact service rows, with contextual photography. */
+.editorial .editorial-offer.section{padding:76px 0}
+.editorial .editorial-offer .section-heading{margin-bottom:38px;gap:32px}
+.editorial .editorial-offer .section-heading h2{font-size:clamp(42px,4.2vw,64px);line-height:1.08}
+.editorial .editorial-offer .section-heading>.eyebrow{padding-top:12px}
+.editorial .editorial-offer .offer-layout{gap:64px}
+.editorial .editorial-offer .service-row summary{padding:14px 18px;gap:16px;min-height:60px}
+.editorial .editorial-offer .service-row h3{font-size:23px;line-height:1.22}
+.editorial .editorial-offer .row-plus{width:30px;height:30px;font-size:22px}
+.editorial .editorial-offer .row-body{padding:0 18px 18px}
+.editorial .editorial-offer .row-body p{font-size:14px;line-height:1.65;margin-bottom:11px;max-width:60ch}
+.editorial .editorial-offer .row-body a{padding:8px 12px;min-height:40px}
+.editorial .editorial-offer .offer-image{top:120px}
+.editorial .editorial-offer .offer-image>span{margin-top:16px;font-size:21px}
+@media(max-width:1100px){.editorial .editorial-offer .offer-layout{gap:34px}.editorial .editorial-offer .service-row h3{font-size:21px}}
+@media(max-width:780px){.editorial .editorial-offer.section{padding:54px 0}.editorial .editorial-offer .section-heading{margin-bottom:28px}.editorial .editorial-offer .section-heading h2{font-size:42px}.editorial .editorial-offer .section-heading>.eyebrow{padding-top:0}.editorial .editorial-offer .service-row summary{padding:14px 12px;gap:12px;min-height:60px}.editorial .editorial-offer .service-row h3{font-size:21px}.editorial .editorial-offer .row-body{padding:0 12px 16px}.editorial .editorial-offer .row-body p{font-size:15px}.editorial .editorial-offer .row-body a{min-height:44px}.editorial .editorial-offer .service-mobile-photo{height:auto;aspect-ratio:3/2;margin-top:16px}}
+
+/* Workshop information belongs to online consultations, without an extra offer entry. */
+.workshop-feature{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:48px;padding:38px 0 48px;border-top:1px solid #cbd1c0}
+.workshop-feature figure{margin:0}.workshop-feature img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}.natural .workshop-feature img{border-radius:20px}
+.workshop-feature h2{font-size:36px;line-height:1.15;letter-spacing:-.6px;margin:15px 0 20px}.workshop-feature p{font-size:16px;line-height:1.75;margin:0 0 16px}.workshop-feature a{display:inline-block;padding:10px 0;border-bottom:1px solid #7d8a68;font-size:14px}
+@media(max-width:780px){.workshop-feature{grid-template-columns:1fr;gap:26px;padding:30px 0}.workshop-feature h2{font-size:32px}}
