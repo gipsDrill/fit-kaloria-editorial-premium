@@ -115,3 +115,30 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
  .editorial .editorial-hero .editorial-hero-content .eyebrow{font-size:8px;line-height:1.5;margin-bottom:22px}
  .editorial .editorial-hero .slide-heading{font-size:clamp(28px,8.8vw,55px);letter-spacing:-1.2px;line-height:1.12}
 }
+
+/* A balanced three-column masthead keeps the complete brand lockup centered. */
+.editorial .editorial-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);column-gap:16px;align-items:center;padding:30px 50px}
+.editorial .editorial-header>.menu-toggle{grid-column:1;grid-row:1;justify-self:start}
+.editorial .editorial-header>.editorial-logo{grid-column:2;grid-row:1;justify-self:center;display:flex;align-items:center;gap:13px;white-space:nowrap;text-align:center;font:28px/1.1 Georgia,serif;letter-spacing:4.2px}
+.editorial .editorial-logo .brand-mark{width:43px;height:62px;padding:5px;background:#fffef7;border-radius:5px;object-fit:contain}
+.editorial .editorial-logo>div{font:inherit;letter-spacing:inherit;line-height:1.1}
+.editorial .editorial-logo .brand-descriptor{font:8px/1.4 Arial,sans-serif;letter-spacing:2.8px;margin:0 0 6px}
+.editorial .editorial-logo span{font:8px/1.4 Arial,sans-serif;letter-spacing:3px;margin:7px 0 0}
+.editorial .editorial-header.is-scrolled,.editorial.service-page .editorial-header{padding-top:15px;padding-bottom:15px}
+@media(max-width:680px){
+ .editorial .editorial-header{padding:20px 18px;column-gap:8px}
+ .editorial .editorial-header>.editorial-logo{font-size:21px;letter-spacing:2.5px;gap:10px}
+ .editorial .editorial-logo .brand-mark{width:33px;height:48px;padding:4px}
+ .editorial .editorial-logo .brand-descriptor{font-size:6px;letter-spacing:1.8px;margin-bottom:5px}
+ .editorial .editorial-logo span{font-size:6px;letter-spacing:2px;margin-top:6px}
+ .editorial .editorial-header>.menu-toggle{font-size:0;width:42px;height:44px;padding:8px;gap:0}
+ .editorial .editorial-header .menu-lines{width:26px}
+ .editorial .editorial-header.is-scrolled,.editorial.service-page .editorial-header{padding-top:12px;padding-bottom:12px}
+}
+@media(max-width:380px){
+ .editorial .editorial-header{padding-left:14px;padding-right:14px;column-gap:5px}
+ .editorial .editorial-header>.editorial-logo{font-size:18px;letter-spacing:2px;gap:8px}
+ .editorial .editorial-logo .brand-mark{width:29px;height:43px;padding:3px}
+ .editorial .editorial-logo .brand-descriptor{font-size:5.5px;letter-spacing:1.4px}
+ .editorial .editorial-logo span{font-size:5.5px;letter-spacing:1.7px}
+}
