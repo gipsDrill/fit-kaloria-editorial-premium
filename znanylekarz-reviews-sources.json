@@ -1,0 +1,34 @@
+{
+  "source": "https://www.znanylekarz.pl/profil/karolina-wiaderek",
+  "checkedAt": "2026-11-09",
+  "rating": 5,
+  "ratingMax": 5,
+  "count": 105,
+  "note": "Public profile checked in the rendered browser. Excerpts selected to avoid authors appearing in the default Facebook and Google cards. Static snapshot, not an automatic feed.",
+  "reviews": [
+    {
+      "name": "Larysa",
+      "initials": "L",
+      "date": "2026-10-22",
+      "displayDate": "22 października 2026",
+      "quote": "Jestem bardzo zadowolona, jem smacznie i chudnę bez stresu.",
+      "url": "https://www.znanylekarz.pl/profil/karolina-wiaderek#o-6643007"
+    },
+    {
+      "name": "Sylwia",
+      "initials": "S",
+      "date": "2026-06-23",
+      "displayDate": "23 czerwca 2026",
+      "quote": "Bardzo cenię sobie opiekę Pani Karoliny…",
+      "url": "https://www.znanylekarz.pl/profil/karolina-wiaderek#o-6369287"
+    },
+    {
+      "name": "MZ",
+      "initials": "MZ",
+      "date": "2026-04-23",
+      "displayDate": "23 kwietnia 2026",
+      "quote": "Jestem absolutnie zachwycony przyjazną, atmosferą, super podejściem, zaangażowaniem…",
+      "url": "https://www.znanylekarz.pl/profil/karolina-wiaderek#o-6257417"
+    }
+  ]
+}

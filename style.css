@@ -149,3 +149,84 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
  .editorial .editorial-logo .brand-descriptor{font-size:5.5px;letter-spacing:1.4px}
  .editorial .editorial-logo span{font-size:5.5px;letter-spacing:1.7px}
 }
+
+/* Center the cooperation heading above all three steps. */
+.editorial .editorial-process .section-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr) minmax(0,1fr);gap:24px;align-items:start}
+.editorial .editorial-process .section-heading>.eyebrow{grid-column:1;grid-row:1;width:auto}
+.editorial .editorial-process .section-heading h2{grid-column:2;grid-row:1;width:100%;margin:0;text-align:center}
+@media(max-width:900px){.editorial .editorial-process .section-heading{grid-template-columns:minmax(0,1fr);gap:22px;text-align:center}.editorial .editorial-process .section-heading>.eyebrow,.editorial .editorial-process .section-heading h2{grid-column:1;grid-row:auto;justify-self:center}.editorial .editorial-process .section-heading>.eyebrow{padding-top:0}}
+
+/* Compact reviews with complete, readable quotations. */
+.editorial .opinions{padding-bottom:65px}
+.editorial .opinions .reviews-heading{gap:28px;margin-bottom:28px}
+.editorial .opinions h2{font-size:38px;line-height:1.12;margin-top:15px}
+.editorial .opinions .reviews-rating{padding:4px 0 4px 25px}
+.editorial .opinions .reviews-rating strong{font-size:64px}
+.editorial .opinions .reviews-rating small{margin-top:9px}
+.editorial .opinions .reviews-grid{gap:30px}
+.editorial .opinions .review-card{padding:20px 0 12px}
+.editorial .opinions .review-card blockquote{margin:17px 0 20px}
+.editorial .opinions .review-card blockquote p{font-size:20px;line-height:1.48}
+.editorial .opinions .review-initials{width:36px;height:36px}
+.editorial .opinions .review-source{margin-top:10px;min-height:32px}
+.editorial .opinions .reviews-footnote{margin-top:12px;padding-top:12px;gap:20px}
+.editorial .opinions .reviews-footnote p{margin:0}
+.editorial .opinions .google-reviews{margin-top:32px;padding-top:32px}
+.editorial .opinions .google-reviews-grid{margin-top:0}
+@media(max-width:900px){.editorial .opinions .reviews-grid{gap:22px}.editorial .opinions .review-card blockquote p{font-size:19px}}
+@media(max-width:680px){
+ .editorial .opinions{padding-bottom:45px}
+ .editorial .opinions .reviews-heading{margin-bottom:22px}
+ .editorial .opinions h2{font-size:34px;margin-top:12px}
+ .editorial .opinions .reviews-rating{margin-top:20px;padding:0 0 0 18px}
+ .editorial .opinions .reviews-rating strong{font-size:48px;letter-spacing:-2px}
+ .editorial .opinions .reviews-grid{gap:12px}
+ .editorial .opinions .review-card{padding:18px 0 8px}
+ .editorial .opinions .review-card blockquote{margin:14px 0 17px}
+ .editorial .opinions .review-source{min-height:44px;margin-top:5px}
+ .editorial .opinions .reviews-footnote{margin-top:8px}
+ .editorial .opinions .google-reviews{margin-top:26px;padding-top:26px}
+}
+
+/* ZnanyLekarz follows the same compact review layout. */
+.editorial .doctor-reviews{padding-bottom:32px;margin-bottom:32px;border-bottom:1px solid #bac4ad}
+.editorial .doctor-reviews .rating-scale{font-size:.42em;letter-spacing:0}
+.doctor-review-label{font:10px/1.6 Arial,sans-serif;letter-spacing:1px;color:#708256}
+.doctor-reviews .review-name{display:block}.doctor-reviews time{display:block;margin-top:5px;font-size:10px;color:#7b8275}
+.doctor-reviews .tone-0{background:#e4ebd7;color:#536b36}.doctor-reviews .tone-1{background:#ebe1f0;color:#846395}.doctor-reviews .tone-2{background:#eee1cf;color:#95683e}
+@media(max-width:680px){.editorial .doctor-reviews{padding-bottom:26px;margin-bottom:26px}}
+
+/* Additional service information in the existing visual language. */
+.offer-additional{margin:35px 0 0;padding-top:22px;border-top:1px solid #b6bda640;font-size:14px;line-height:1.8;color:var(--muted,#66695f)}
+.offer-additional a{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#829269;transition:color .2s}.offer-additional a:hover{color:#567039}
+.service-details{padding:45px 0 55px;border-top:1px solid #bac4ad}.service-details>h2{font:40px/1.15 Georgia,serif;letter-spacing:-1px;margin:16px 0 30px}
+.service-details-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 55px}.service-details-grid article{border-top:1px solid #bac4ad;padding-top:22px}
+.service-details-grid h3{font:26px/1.2 Georgia,serif;margin:0 0 13px}.service-details-grid p{font-size:16px;line-height:1.8;margin:0;color:var(--muted,#66695f)}
+@media(max-width:680px){.offer-additional{font-size:14px;margin-top:28px;padding-top:20px}.service-details{padding:32px 0 40px}.service-details>h2{font-size:33px;margin-bottom:24px}.service-details-grid{grid-template-columns:1fr;gap:24px}.service-details-grid h3{font-size:25px}}
+
+
+
+/* One review section, three sources, one visible quotation per source. */
+.opinions.review-overview{padding:50px 0}
+.review-overview-heading{margin-bottom:24px}.review-overview .review-overview-heading h2{font-size:42px;line-height:1.12;margin:15px 0 0}
+.review-sources{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.review-source-column{display:flex;flex-direction:column;position:relative;min-width:0;border-top:1px solid #aebaa2;padding-top:20px}
+.review-source-summary{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-bottom:18px;border-bottom:1px solid #cbd1c0}
+.review-source-summary h3{font:21px/1.2 Georgia,serif;margin:0 0 7px}.review-source-summary a{font:12px/1.5 Arial,sans-serif;text-decoration:underline;text-underline-offset:4px}
+.review-source-score{text-align:right;white-space:nowrap}.review-source-score strong{display:block;font:42px/1 Georgia,serif;letter-spacing:-1.4px;color:#263b32}.review-source-score strong span{font-size:20px;letter-spacing:0}.review-source-score small{display:block;font:10px/1.4 Arial,sans-serif;color:#677261;margin-top:5px}
+.review-source-slides{display:grid;flex:1}
+.opinions.review-overview .review-card{grid-area:1/1;border:0;margin:0;padding:19px 0 0;min-width:0;box-shadow:none;background:transparent;visibility:hidden;opacity:0;pointer-events:none}
+.opinions.review-overview .review-card[data-active="true"]{visibility:visible;opacity:1;pointer-events:auto}
+.opinions.review-overview .review-card blockquote{margin:0 0 20px}
+.opinions.review-overview .review-card blockquote p{font-size:19px;line-height:1.48}
+.review-overview .review-recommends,.review-overview .doctor-review-label{display:none}
+.opinions.review-overview .review-source{margin-top:7px;min-height:44px;font-size:11px;max-width:calc(100% - 120px)}
+.review-controls{position:absolute;right:0;bottom:0;display:flex;align-items:center;gap:7px;margin:0;height:44px}
+.review-controls button{display:grid;place-items:center;width:36px;height:36px;padding:0;border:1px solid #aebaa2;border-radius:50%;background:transparent;color:#263b32;cursor:pointer;transition:background .2s}
+.review-controls button:hover:not(:disabled){background:#e4e8db}.review-controls button:disabled{opacity:.3;cursor:default}.review-controls button:focus-visible{outline:2px solid #627b48;outline-offset:3px}
+.review-controls svg{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.review-controls span{font:11px/1.4 Arial,sans-serif;color:#62705c;min-width:28px;text-align:center}
+.review-overview-note{border-top:1px solid #cbd1c0;padding-top:15px;margin:22px 0 0;font:11px/1.6 Arial,sans-serif;color:#6b705f}
+.natural .review-source-column{border:1px solid #dfe1d4;border-radius:18px;padding:22px;background:#fffdf7}.natural .review-controls{right:22px;bottom:22px}
+@media(max-width:900px){.review-sources{gap:24px}.review-source-summary{gap:10px}.review-source-summary h3{font-size:19px}.review-source-score strong{font-size:34px}.opinions.review-overview .review-card blockquote p{font-size:18px}}
+@media(max-width:680px){.opinions.review-overview{padding:45px 0}.review-overview .review-overview-heading h2{font-size:34px}.review-overview-heading{margin-bottom:25px}.review-sources{grid-template-columns:1fr;gap:25px}.review-source-column{padding-top:17px}.review-source-summary{padding-bottom:14px}.review-source-summary h3{font-size:23px}.review-source-score strong{font-size:36px}.opinions.review-overview .review-card{padding-top:16px}.opinions.review-overview .review-card blockquote{margin-bottom:16px}.review-controls button{width:40px;height:44px}.review-controls{margin-top:2px}.review-overview-note{margin-top:20px}}

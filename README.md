@@ -8,7 +8,7 @@ Strona demonstracyjna poradni dietetycznej Karoliny Wiaderek w Łodzi.
 Statyczny HTML/CSS/JS bez procesu budowania i zewnętrznych zależności. GitHub Pages: Deploy from a branch → main → /(root). Wszystkie ścieżki zasobów są względne.
 
 ## Treść i źródła
-- Dane kontaktowe, kwalifikacje i 12 lat doświadczenia: informacje dostarczone przez zamawiającego; doświadczenie oznaczone jako deklaracja z Facebooka.
+- Dane kontaktowe, kwalifikacje i 13 lat doświadczenia: informacje dostarczone przez zamawiającego; doświadczenie oznaczone jako deklaracja z Facebooka.
 - Sześć usług oraz godziny pon.–pt. 8:00–20:00 potwierdzone przez zamawiającego w rozmowie 9 listopada 2026.
 - Trzy krótkie cytaty z publicznych rekomendacji na Facebooku, z nazwiskiem autora, datą i odnośnikiem do oryginalnego wpisu. Statystyka profilu: 100% poleca (59 opinii), odczytana 9 listopada 2026. Nie jest przeliczana na ocenę gwiazdkową. Nie dodano wymyślonych opinii, liczby pacjentów, cen ani dostępnych terminów.
 - Dwa portrety Karoliny dostarczone przez zamawiającego. W wersji Natural wycięcie tła zdjęcia w fioletowym garniturze przygotowano narzędziem generowania obrazów.
