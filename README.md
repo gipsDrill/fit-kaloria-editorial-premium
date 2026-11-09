@@ -46,3 +46,6 @@ Znak z granatową sylwetką i pięcioma zielonymi kropkami przygotowano w więks
 
 ## Odświeżenie fotografii
 Konsultacje i dietetyka kliniczna korzystają z osobnych fotografii ilustracyjnych. Nie przedstawiają rzeczywistego spotkania ani pacjentów poradni. Galeria Editorial ma trzy nowe autorskie obrazy, a etap „Twój kierunek” przedstawia planer. Każda rozwijana usługa posiada odrębne zdjęcie. Wspólna nazwa grupy details oraz obsługa JavaScript zapewniają, że tylko jedna usługa jest otwarta naraz.
+
+## Podstrony i kontakt
+Sześć oddzielnych stron usług ma unikalne opisy, tytuły, canonical, Open Graph, Service i BreadcrumbList oraz linki wewnętrzne. Formularz działa lokalnie: przygotowuje mailto lub kopiuje treść, nie wysyła danych automatycznie, nie zapisuje ich i nie zastępuje rejestracji. Opinie Google to jawne podsumowania wypowiedzi, ze źródłem i datą sprawdzenia. Oceny pozostają widoczną informacją bez samooceny aggregateRating.
