@@ -42,7 +42,7 @@ Analiza nawyków: ilustracyjny tygodniowy dzienniczek z zaznaczeniami. Konsultac
 Zdjęcie karolina-konsultacja.jpg zostało dostarczone przez zamawiającego 9 listopada 2026. Użyto go przy dietetyce klinicznej; nie stanowi podstawy do dopisania dodatkowych usług lub kwalifikacji.
 
 ## Logo
-Znak z granatową sylwetką i pięcioma zielonymi kropkami przygotowano w większej rozdzielczości i z przezroczystym tłem na podstawie przesłanego wzoru. Pliki logo-fit-kaloria.png i favicon-logo.png zastępują wcześniejszy symbol liści.
+Znak z granatową sylwetką i pięcioma zielonymi kropkami zachowuje oryginalne proporcje. Favicon ma nieprzezroczyste białe kwadratowe tło i margines wokół logo. Dostępne formaty: SVG, wielorozmiarowe ICO (16/32/48/256), PNG oraz ikona Apple 180 px. Pliki generuje work/prepare-favicons.ps1 przed uruchomieniem node work/news.mjs.
 
 ## Odświeżenie fotografii
 Konsultacje i dietetyka kliniczna korzystają z osobnych fotografii ilustracyjnych. Nie przedstawiają rzeczywistego spotkania ani pacjentów poradni. Galeria Editorial ma trzy nowe autorskie obrazy, a etap „Twój kierunek” przedstawia planer. Każda rozwijana usługa posiada odrębne zdjęcie. Wspólna nazwa grupy details oraz obsługa JavaScript zapewniają, że tylko jedna usługa jest otwarta naraz.
