@@ -94,3 +94,11 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
 @media(prefers-reduced-motion:reduce){.fb-post-thumb img,.fb-post-video summary{transition:none}}
 
 .facebook-panel-heading+.text-link{margin:0 0 20px;padding-bottom:10px}
+
+/* Vector arrows avoid iOS emoji substitution and remain in the link's text color. */
+.ui-arrow{display:inline-block;width:1em;height:1em;min-width:1em;flex:none;vertical-align:-.12em;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.link-arrow{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;vertical-align:middle}
+.card-link b{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+.header-contact{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;flex-shrink:0;max-width:none}
+@media(max-width:680px){.editorial .header-contact{max-width:none;padding:7px 0;font-size:10px;gap:5px}.editorial-header{column-gap:10px}.editorial-logo{min-width:0}.editorial-logo>div{white-space:nowrap}}
+@media(max-width:380px){.editorial .header-contact{font-size:9px;gap:3px;max-width:none}.editorial-header{column-gap:5px}}

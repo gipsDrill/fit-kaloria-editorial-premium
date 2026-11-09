@@ -53,3 +53,6 @@ Sześć oddzielnych stron usług ma unikalne opisy, tytuły, canonical, Open Gra
 ## Aktualności
 Zastąpiono niedziałający Page Plugin pięcioma kartami zweryfikowanych publicznych wpisów z 9 listopada 2026, uporządkowanymi według daty. Trzy rolki mają działające odtwarzacze Facebooka; dwie, których osadzenie Facebook blokuje ze względu na prawa do treści, mają miniaturę, opis i link do źródła. Podsumowania są redakcyjne, zdjęcia są publicznymi miniaturami wpisów. Nie pobrano ani nie opublikowano kopii filmów. Przy zamknięciu odtwarzacza iframe jest usuwany, co zatrzymuje film. Jednocześnie otwarty jest jeden odtwarzacz.
 Lista nie jest automatycznie synchronizowana. Nowe wpisy trzeba dodać do work/facebook-posts.json i sprawdzić możliwość osadzenia; do stabilnej automatycznej synchronizacji potrzebne jest autoryzowane połączenie Meta. Generator wyświetla maksymalnie 10 wpisów i nie tworzy archiwum. Pełna przebudowa: node work/news.mjs.
+
+## Podglądy udostępnianych linków
+Grafika fit-kaloria-social-v21.jpg (1200 × 630, JPEG) oraz statyczne znaczniki Open Graph i Twitter Card. Każdy projekt ma własną kompozycję, a podstrony zachowują osobne tytuły i opisy. Generowane podczas node work/news.mjs. Messenger kontroluje pamięć podręczną i końcowy wygląd karty; istniejące wiadomości mogą zachować poprzedni podgląd.
