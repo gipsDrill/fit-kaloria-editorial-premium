@@ -34,4 +34,12 @@ Szczegółowe odnośniki i fragmenty: reviews-sources.json. Usunięto numery pop
 Usunięto także numery przy nazwach usług. Podpis zdjęcia oferty: „Zdrowe nawyki w zgodzie z Tobą”.
 
 ## Fotografie sekcji i interakcje
-Sekcja z hasłem zawiera fotografię świeżych produktów, proces trzy ilustracje etapów współpracy, a kontakt oryginalny portret Karoliny. Usunięto numery etapów. Wiersze oferty mają ciemnozielony stan najechania i obsługi klawiaturą. Portrety w pokazie zachowują pełny kadr, a boki wypełnia rozmyte tło. Zdjęcia konsultacji online i analizy żywienia są ilustracjami wygenerowanymi na potrzeby demonstracji, nie dokumentacją wizyt.
+Sekcja z hasłem zawiera fotografię świeżych produktów, proces trzy ilustracje etapów współpracy, a kontakt oryginalny portret Karoliny. Usunięto numery etapów. Wiersze oferty mają ciemnozielony stan najechania i obsługi klawiaturą. Pokaz ma stałą proporcję kadru 1.12:1 na wszystkich ekranach; portrety są wyrównane do góry, aby zachować głowę w kadrze, a boki wypełnia rozmyte tło. Zdjęcia konsultacji online i analizy żywienia są ilustracjami wygenerowanymi na potrzeby demonstracji, nie dokumentacją wizyt.
+
+## Aktualizacja zdjęć i interakcji
+Analiza nawyków: ilustracyjny tygodniowy dzienniczek z zaznaczeniami. Konsultacje online: na ekranie laptopa portret w fioletowym garniturze. W Editorial kontakt także wykorzystuje fioletowy portret, odmienny od czerwonego w sekcji O mnie. Rozwinięcie usługi wybiera właściwe zdjęcie obok i zamyka pozostałe pozycje; na telefonie zdjęcie jest wewnątrz opisu. Zmiana zdjęcia uwzględnia ograniczenie ruchu i szybkie przełączanie pozycji.
+
+Zdjęcie karolina-konsultacja.jpg zostało dostarczone przez zamawiającego 9 listopada 2026. Użyto go przy dietetyce klinicznej; nie stanowi podstawy do dopisania dodatkowych usług lub kwalifikacji.
+
+## Logo
+Znak z granatową sylwetką i pięcioma zielonymi kropkami przygotowano w większej rozdzielczości i z przezroczystym tłem na podstawie przesłanego wzoru. Pliki logo-fit-kaloria.png i favicon-logo.png zastępują wcześniejszy symbol liści.

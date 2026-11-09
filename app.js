@@ -11,3 +11,28 @@ function stop(){clearInterval(timer)}
 function start(){stop();if(!paused&&!document.hidden&&slides.length>1)timer=setInterval(()=>showSlide((active+1)%slides.length),7500)}
 function pauseLabel(){if(pause){pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'Wznów pokaz zdjęć':'Zatrzymaj pokaz zdjęć')}}
 controls.forEach((b,i)=>b.addEventListener('click',()=>{showSlide(i);paused=true;stop();pauseLabel()}));pause?.addEventListener('click',()=>{paused=!paused;pauseLabel();start()});motion.addEventListener('change',e=>{if(e.matches){paused=true;pauseLabel();stop();document.documentElement.classList.remove('js-motion')}});document.addEventListener('visibilitychange',start);pauseLabel();start();
+
+// Keep the adjacent service photograph in sync with the expanded item.
+const serviceAssets=[{"src":"karolina-red.jpg","alt":"Karolina Wiaderek — konsultacje dietetyczne","portrait":true},{"src":"weight.jpg","alt":"Jabłko, miarka i waga — ilustracja redukcji masy ciała"},{"src":"karolina-konsultacja.jpg","alt":"Karolina Wiaderek z kartą analizy składu ciała","portrait":true,"width":1077,"height":1350},{"src":"mealplan.jpg","alt":"Przykładowe kompozycje posiłków w szklanych pojemnikach"},{"src":"online-purple.jpg","alt":"Ilustracja konsultacji online z portretem Karoliny w fioletowym garniturze"},{"src":"habits-tracker.jpg","alt":"Dzienniczek obserwacji nawyków: woda, posiłki i warzywa"}];
+const serviceRows=[...document.querySelectorAll('.service-row')];
+const servicePreview=document.getElementById('service-preview');
+let serviceImageRequest=0;
+function updateServicePhoto(index){
+ if(!servicePreview)return;
+ const asset=serviceAssets[index],request=++serviceImageRequest;
+ const loaded=new Image();
+ loaded.onload=()=>{
+  if(request!==serviceImageRequest)return;
+  servicePreview.getAnimations().forEach(animation=>animation.cancel());
+  servicePreview.src=asset.src;servicePreview.alt=asset.alt;
+  servicePreview.width=asset.width||(asset.portrait?2048:1200);servicePreview.height=asset.height||(asset.portrait?2048:800);
+  servicePreview.dataset.portrait=String(!!asset.portrait);
+  if(!motion.matches&&typeof servicePreview.animate==='function')servicePreview.animate([{opacity:.25},{opacity:1}],{duration:420,easing:'ease-out'});
+ };
+ loaded.src=asset.src;
+}
+serviceRows.forEach((row,index)=>row.addEventListener('toggle',()=>{
+ if(!row.open)return;
+ serviceRows.forEach(other=>{if(other!==row)other.open=false});
+ updateServicePhoto(index);
+}));
