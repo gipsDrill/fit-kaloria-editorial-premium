@@ -43,3 +43,6 @@ Zdjęcie karolina-konsultacja.jpg zostało dostarczone przez zamawiającego 9 li
 
 ## Logo
 Znak z granatową sylwetką i pięcioma zielonymi kropkami przygotowano w większej rozdzielczości i z przezroczystym tłem na podstawie przesłanego wzoru. Pliki logo-fit-kaloria.png i favicon-logo.png zastępują wcześniejszy symbol liści.
+
+## Odświeżenie fotografii
+Konsultacje i dietetyka kliniczna korzystają z osobnych fotografii ilustracyjnych. Nie przedstawiają rzeczywistego spotkania ani pacjentów poradni. Galeria Editorial ma trzy nowe autorskie obrazy, a etap „Twój kierunek” przedstawia planer. Każda rozwijana usługa posiada odrębne zdjęcie. Wspólna nazwa grupy details oraz obsługa JavaScript zapewniają, że tylko jedna usługa jest otwarta naraz.
