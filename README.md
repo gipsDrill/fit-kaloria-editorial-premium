@@ -56,3 +56,6 @@ Lista nie jest automatycznie synchronizowana. Nowe wpisy trzeba dodać do work/f
 
 ## Podglądy udostępnianych linków
 Grafika fit-kaloria-social-v21.jpg (1200 × 630, JPEG) oraz statyczne znaczniki Open Graph i Twitter Card. Każdy projekt ma własną kompozycję, a podstrony zachowują osobne tytuły i opisy. Generowane podczas node work/news.mjs. Messenger kontroluje pamięć podręczną i końcowy wygląd karty; istniejące wiadomości mogą zachować poprzedni podgląd.
+
+## Nagłówki pokazu zdjęć
+Każdy z pięciu slajdów ma własny dwuwierszowy nagłówek powiązany ze zdjęciem. Nagłówek zmienia się razem z obrazem automatycznie co 4,5 s oraz przy ręcznym wyborze; respektuje ograniczenie ruchu. Treści: work/slide-captions.mjs.

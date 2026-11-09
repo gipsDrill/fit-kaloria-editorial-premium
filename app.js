@@ -6,7 +6,17 @@ function closeMenu(focus=false){if(!menu)return;menu.hidden=true;toggle.setAttri
 if(toggle&&menu){toggle.addEventListener('click',()=>{const open=toggle.getAttribute('aria-expanded')==='true';if(open)closeMenu(true);else{menu.hidden=false;toggle.setAttribute('aria-expanded','true');if(backdrop){backdrop.hidden=false;document.body.classList.add('menu-open');}menu.querySelector('a')?.focus();}});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeMenu()));backdrop?.addEventListener('click',()=>closeMenu(true));document.addEventListener('keydown',e=>{if(menu.hidden)return;if(e.key==='Escape')closeMenu(true);if(e.key==='Tab'&&backdrop){const links=[toggle,...menu.querySelectorAll('a,button')];const first=links[0],last=links[links.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});window.addEventListener('resize',()=>{if(!backdrop&&window.innerWidth>780)closeMenu()});}
 document.querySelectorAll('.copy-email').forEach(btn=>btn.addEventListener('click',async()=>{const status=btn.nextElementSibling;try{await navigator.clipboard.writeText('karolina.wiaderek.dietetyk@gmail.com');status.textContent='Adres e-mail został skopiowany.';}catch{status.textContent='Zaznacz i skopiuj adres e-mail widoczny powyżej.';}}));
 const slides=[...document.querySelectorAll('.hero-slide')],controls=[...document.querySelectorAll('[data-slide]')],pause=document.querySelector('.pause-slides');let active=0,paused=motion.matches,timer;
-function showSlide(i){active=i;document.querySelector('.editorial-hero')?.classList.toggle('is-portrait',slides[i].classList.contains('portrait-slide'));slides.forEach((s,j)=>{s.classList.toggle('active',j===i);s.setAttribute('aria-hidden',String(j!==i))});controls.forEach((b,j)=>b.setAttribute('aria-pressed',String(j===i)));}
+function updateSlideCaption(i){
+ const heading=document.querySelector('.slide-heading');
+ if(!heading||!slides[i]?.dataset.title)return;
+ heading.querySelector('[data-slide-title]').textContent=slides[i].dataset.title;
+ heading.querySelector('[data-slide-accent]').textContent=slides[i].dataset.accent;
+ if(!motion.matches&&typeof heading.animate==='function'){
+  heading.getAnimations().forEach(animation=>animation.cancel());
+  heading.animate([{opacity:.25},{opacity:1}],{duration:400,easing:'ease-out'});
+ }
+}
+function showSlide(i){active=i;updateSlideCaption(i);document.querySelector('.editorial-hero')?.classList.toggle('is-portrait',slides[i].classList.contains('portrait-slide'));slides.forEach((s,j)=>{s.classList.toggle('active',j===i);s.setAttribute('aria-hidden',String(j!==i))});controls.forEach((b,j)=>b.setAttribute('aria-pressed',String(j===i)));}
 function stop(){clearInterval(timer)}
 function start(){stop();if(!paused&&!document.hidden&&slides.length>1)timer=setInterval(()=>showSlide((active+1)%slides.length),4500)}
 function pauseLabel(){if(pause){pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'Wznów pokaz zdjęć':'Zatrzymaj pokaz zdjęć')}}
