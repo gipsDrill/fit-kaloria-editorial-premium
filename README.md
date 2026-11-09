@@ -30,3 +30,5 @@ Dodano zdjęcia przygotowywania posiłków i kompozycji przy oknie oraz wyizolow
 ## Opinie i oznaczenia sekcji
 Źródło: https://www.facebook.com/profile.php?id=100089357919979&sk=reviews
 Szczegółowe odnośniki i fragmenty: reviews-sources.json. Usunięto numery poprzedzające nazwy sekcji i podpisy galerii.
+
+Usunięto także numery przy nazwach usług. Podpis zdjęcia oferty: „Zdrowe nawyki w zgodzie z Tobą”.
