@@ -105,20 +105,24 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
 
 /* All slides share the approved portrait text coordinates and typography. */
 .editorial .editorial-hero .editorial-hero-content{top:25%;left:0;right:0}
-.editorial .editorial-hero .editorial-hero-content .eyebrow{font-size:11px;line-height:1.5;margin-bottom:18px}
-.editorial .editorial-hero .slide-heading{font-size:clamp(58px,5.6vw,100px);line-height:.98;height:2.24em;min-height:2.24em;letter-spacing:-4px}
+.editorial .editorial-hero .editorial-hero-content .eyebrow{font-size:12px;line-height:1.5;margin-bottom:18px}
+.editorial .editorial-hero .slide-heading{font-size:clamp(64px,6.3vw,112px);line-height:.98;height:2.24em;min-height:2.24em;letter-spacing:-4px}
 .slide-heading>[data-slide-title],.slide-heading>[data-slide-accent]{display:block;white-space:nowrap}
 .editorial .editorial-hero .editorial-hero-content .round-link{margin-top:22px}
 @media(min-aspect-ratio:3/2){.editorial .editorial-hero .editorial-hero-content{top:48%}}
+@media(min-aspect-ratio:3/2) and (max-height:800px){.editorial .editorial-hero .slide-heading{font-size:clamp(64px,min(6.3vw,calc(22svh - 80px)),112px)}}
 @media(max-width:680px){
  .editorial .editorial-hero .editorial-hero-content{top:38%}
- .editorial .editorial-hero .editorial-hero-content .eyebrow{font-size:8px;line-height:1.5;margin-bottom:22px}
- .editorial .editorial-hero .slide-heading{font-size:clamp(28px,8.8vw,55px);letter-spacing:-1.2px;line-height:1.12}
+ .editorial .editorial-hero .editorial-hero-content .eyebrow{font-size:9px;line-height:1.5;margin-bottom:22px}
+ .editorial .editorial-hero .slide-heading{font-size:clamp(30px,9.4vw,59px);letter-spacing:-1.2px;line-height:1.12}
 }
 
 /* A balanced three-column masthead keeps the complete brand lockup centered. */
 .editorial .editorial-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);column-gap:16px;align-items:center;padding:30px 50px}
-.editorial .editorial-header>.menu-toggle{grid-column:1;grid-row:1;justify-self:start}
+.editorial .editorial-header>.menu-toggle{grid-column:1;grid-row:1;justify-self:start;font-size:14px;gap:14px;min-height:48px}
+.editorial .editorial-header .menu-lines{width:34px;height:16px;border-width:1.5px}
+.editorial.menu-open .editorial-header .menu-lines{height:1px;border-bottom:0}
+.editorial.menu-open .editorial-header .menu-lines:after{width:34px;border-top-width:1.5px}
 .editorial .editorial-header>.editorial-logo{grid-column:2;grid-row:1;justify-self:center;display:flex;align-items:center;gap:13px;white-space:nowrap;text-align:center;font:28px/1.1 Georgia,serif;letter-spacing:4.2px}
 .editorial .editorial-logo .brand-mark{width:43px;height:62px;padding:5px;background:#fffef7;border-radius:5px;object-fit:contain}
 .editorial .editorial-logo>div{font:inherit;letter-spacing:inherit;line-height:1.1}
@@ -131,8 +135,11 @@ html{scroll-padding-top:110px}body{scroll-margin-top:0}
  .editorial .editorial-logo .brand-mark{width:33px;height:48px;padding:4px}
  .editorial .editorial-logo .brand-descriptor{font-size:6px;letter-spacing:1.8px;margin-bottom:5px}
  .editorial .editorial-logo span{font-size:6px;letter-spacing:2px;margin-top:6px}
- .editorial .editorial-header>.menu-toggle{font-size:0;width:42px;height:44px;padding:8px;gap:0}
- .editorial .editorial-header .menu-lines{width:26px}
+ .editorial .editorial-header>.menu-toggle{position:relative;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1;letter-spacing:.3px;min-width:48px;width:48px;height:48px;padding:0;gap:0}
+ .editorial .editorial-header .menu-lines{position:absolute;left:50%;top:50%;width:34px;height:30px;transform:translate(-50%,-50%)}
+ .editorial .editorial-header .menu-label{position:relative}
+ .editorial.menu-open .editorial-header .menu-lines{height:1px;transform:translate(-50%,-50%) rotate(45deg)}
+ .editorial.menu-open .editorial-header .menu-label{opacity:0}
  .editorial .editorial-header.is-scrolled,.editorial.service-page .editorial-header{padding-top:12px;padding-bottom:12px}
 }
 @media(max-width:380px){
