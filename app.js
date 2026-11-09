@@ -37,18 +37,5 @@ serviceRows.forEach((row,index)=>row.addEventListener('toggle',()=>{
  updateServicePhoto(index);
 }));
 
-// Contact information remains on the device until the visitor sends their email.
-document.querySelectorAll('.contact-form').forEach(form=>{
- form.querySelector('fieldset').disabled=false;form.querySelector('.form-submit').disabled=false;
- const status=form.querySelector('.form-status'),result=form.querySelector('.form-result');let draft='';
- form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;
-  const fields=new FormData(form),name=String(fields.get('name')||'').trim(),reply=String(fields.get('email')||'').trim(),topic=String(fields.get('topic')||''),message=String(fields.get('message')||'').trim();
-  draft=['Dzień dobry,','Interesuje mnie: '+topic+'.',message,'Proszę o kontakt na adres: '+reply+'.',name?'Pozdrawiam, '+name:''].filter(Boolean).join('\n\n');
-  form.querySelector('.mail-draft').href='mailto:karolina.wiaderek.dietetyk@gmail.com?subject='+encodeURIComponent('Fit Kaloria — '+topic)+'&body='+encodeURIComponent(draft);
-  result.hidden=false;status.textContent='Wiadomość jest gotowa. Otwórz ją w poczcie lub skopiuj jej treść.';
- });
- form.addEventListener('input',()=>{result.hidden=true;status.textContent='';draft='';});
- form.querySelector('.copy-draft').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(draft);status.textContent='Treść skopiowana. Wklej ją do e-maila i wyślij do poradni.';}catch{status.textContent='Nie udało się skopiować. Użyj przycisku „Otwórz w poczcie” lub zadzwoń do poradni.';}});
-});
 const persistentHeader=document.querySelector('.editorial-header');
 if(persistentHeader){let pending=false;const updateHeader=()=>{persistentHeader.classList.toggle('is-scrolled',window.scrollY>45);pending=false;};updateHeader();window.addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(updateHeader);}},{passive:true});}
