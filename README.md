@@ -32,3 +32,6 @@ Dodano zdjęcia przygotowywania posiłków i kompozycji przy oknie oraz wyizolow
 Szczegółowe odnośniki i fragmenty: reviews-sources.json. Usunięto numery poprzedzające nazwy sekcji i podpisy galerii.
 
 Usunięto także numery przy nazwach usług. Podpis zdjęcia oferty: „Zdrowe nawyki w zgodzie z Tobą”.
+
+## Fotografie sekcji i interakcje
+Sekcja z hasłem zawiera fotografię świeżych produktów, proces trzy ilustracje etapów współpracy, a kontakt oryginalny portret Karoliny. Usunięto numery etapów. Wiersze oferty mają ciemnozielony stan najechania i obsługi klawiaturą. Portrety w pokazie zachowują pełny kadr, a boki wypełnia rozmyte tło. Zdjęcia konsultacji online i analizy żywienia są ilustracjami wygenerowanymi na potrzeby demonstracji, nie dokumentacją wizyt.
